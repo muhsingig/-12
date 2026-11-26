@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Frame (dev)</title>
+<style>
+  html,body{margin:0;background:#222;overflow:hidden}
+  .wrap{width:1440px;height:900px;transform:scale(var(--s,0.5));transform-origin:0 0}
+  iframe{width:1440px;height:900px;border:0;display:block}
+  .wrap.phone,.wrap.phone iframe{width:390px;height:844px}
+</style></head>
+<body>
+<div class="wrap" id="w"><iframe id="f" src="/"></iframe></div>
+<script>
+  const q = new URLSearchParams(location.search);
+  const w = document.getElementById('w');
+  if (q.get('phone')) w.classList.add('phone');
+  const fit = () => {
+    const pw = q.get('phone') ? 390 : 1440, ph = q.get('phone') ? 844 : 900;
+    w.style.setProperty('--s', Math.min(innerWidth / pw, innerHeight / ph));
+  };
+  fit(); addEventListener('resize', fit);
+  window.go = (y) => document.getElementById('f').contentWindow.scrollTo(0, y);
+  window.win = () => document.getElementById('f').contentWindow;
+</script>
+</body></html>

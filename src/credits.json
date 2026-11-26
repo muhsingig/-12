@@ -1,0 +1,58 @@
+[
+ {
+  "img": "/img/stockholm-night.jpg",
+  "title": "Stockholm by night 2008k",
+  "creator": "Holger.Ellgaard",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=5547937"
+ },
+ {
+  "img": "/img/fresnel.jpg",
+  "title": "Fresnel Lens at Point Arena Lighthouse Museum",
+  "creator": "Frank Schulenburg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=18843700"
+ },
+ {
+  "img": "/img/aurora-kiruna.jpg",
+  "title": "Aurora Borealis Kiruna",
+  "creator": "Martin Eklund",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=83907015"
+ },
+ {
+  "img": "/img/newton-prism.jpg",
+  "title": "Production of spectrum by refraction at a prism Wellcome M0010896",
+  "creator": null,
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=36348095"
+ },
+ {
+  "img": "/img/candle.jpg",
+  "title": "Candle flame closeup",
+  "creator": "domdomegg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=45980204"
+ },
+ {
+  "img": "/img/gas-lamps.jpg",
+  "title": "Authentic gas lamps lit twice a day by lamplighters - Gornji grad",
+  "creator": "Jorge Lascar",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/8721758@N06/13023943713"
+ },
+ {
+  "img": "/img/lighthouse.jpg",
+  "title": "Lighthouse at night",
+  "creator": "Joshua Hibbert",
+  "license": "Unsplash Licence",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://picsum.photos/id/870/info"
+ }
+]

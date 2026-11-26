@@ -1,0 +1,7 @@
+node_modules
+dist
+.vercel
+.claude
+.taste-skill/inspect
+assets/*.jpg
+assets/*.png
