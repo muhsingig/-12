@@ -39,7 +39,14 @@ export default function Hero() {
       { el: l2.current, text: 'SOLVIK' }
     ];
     let alive = true;
-    document.fonts.ready.then(() => {
+    // the relief is drawn from the real face, so ask for it by name before drawing: on a cold visit
+    // fonts.ready can resolve before the stylesheet has even requested it
+    const face = '800 200px "Libre Franklin"';
+    const ready = Promise.race([
+      document.fonts.load(face, 'ELINSOLVIK').then(() => document.fonts.ready),
+      new Promise(r => setTimeout(r, 2500))
+    ]).catch(() => {});
+    ready.then(() => {
       if (!alive) return;
       hl.layout(lines());
       hl.start();
@@ -51,6 +58,11 @@ export default function Hero() {
       t = setTimeout(() => hl.layout(lines()), 120);
     };
     window.addEventListener('resize', onResize);
+    // if the face arrives after the first drawing (slow network), draw the relief again
+    const onFonts = () => {
+      if (alive && document.fonts.check(face)) onResize();
+    };
+    document.fonts.addEventListener?.('loadingdone', onFonts);
     const el = section.current;
     const pos = e => {
       const r = el.getBoundingClientRect();
@@ -96,6 +108,7 @@ export default function Hero() {
     return () => {
       alive = false;
       window.removeEventListener('resize', onResize);
+      document.fonts.removeEventListener?.('loadingdone', onFonts);
       el.removeEventListener('pointermove', onMove);
       el.removeEventListener('pointerdown', onDown);
       el.removeEventListener('pointerup', onUp);
