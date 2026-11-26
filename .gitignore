@@ -5,3 +5,6 @@ dist
 .taste-skill/inspect
 assets/*.jpg
 assets/*.png
+
+.vercel
+.env*
